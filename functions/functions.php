@@ -147,66 +147,92 @@ function getPro(){
             ";
 
         }
+
+        /*
+
+ 
+
+        */
         
         echo "
         
-        <div class='col-md-4 col-sm-6 single'>
+
+
+
+        <div class='col-md-4 col-sm-6 single m-1 ' >
         
-            <div class='product'>
-            
-                <a href='details.php?pro_id=$pro_id'>
-                
-                    <img class='img-responsive' src='admin_area/product_images/$pro_img1'>
-                
-                </a>
-                
-                <div class='text'>
-
-                <center>
-                
-                    <p  class='btn btn-primary'> $manufacturer_title </p>
-                
-                </center>
-
-
-                <center>
-                
-                <h3 >
-            
-                        <a href='details.php?pro_id=$pro_id'>$pro_title</a>
-                    
-                    </h3>
-            
-                </center>
-                
-                    
-                    
-                    <p class='price'>
-                    
-                    $product_price &nbsp;$product_sale_price
-                    
-                    </p>
-                    
-                    <p class='button'>
-                    
-                        <a class='btn btn-default' href='details.php?pro_id=$pro_id'>
-
-                            View Details
-
-                        </a>
-                    
-                        <a class='btn btn-primary' href='details.php?pro_id=$pro_id'>
-
-                            <i class='fa fa-shopping-cart'></i> Add to Cart
-
-                        </a>
-                    
-                    </p>
-                
-                </div>
-                $product_label</div>
+        <div class='product'>
         
-        </div>";
+            <a href='details.php?pro_id=$pro_id'>
+            
+                <img class='img-responsive' src='admin_area/product_images/$pro_img1'>
+            
+            </a>
+            
+            <div class='text'>
+
+
+
+            <center>
+            
+            <h3 >
+        
+                    <a class='manu_title' href='details.php?pro_id=$pro_id'>$pro_title</a>
+                
+                </h3>
+
+                
+        
+            </center>
+
+
+            <div class='row'  style=\" padding-bottom: 7px \">
+
+            <div class='col-md-6'>
+            
+            
+            <p class='price'>
+                
+                $product_price &nbsp;$product_sale_price
+                
+                </p>
+            </div>
+
+            <div class='col-md-6 ' style=\"float:right \"/>
+            
+            <div class='icon_in_product '>
+
+    
+        <a class='btn btn-primary shopping' href='details.php?pro_id=$pro_id'  style=\"float:right \" >
+
+            <i class='fa fa-shopping-cart'   style=\" font-size: 23px \"></i>
+
+        </a>
+
+        </div>
+            </div>
+            
+            </div>
+            
+                
+                
+                
+                
+            
+                
+                   
+                
+              
+            
+            </div>
+            $product_label</div>
+    
+    </div>
+        
+        
+        
+        
+        ";
         
     }
     
@@ -464,68 +490,75 @@ function getProducts(){
         
         echo "
         
-        <div class='col-md-4 col-sm-6 center-responsive '>
+        <div class='col-md-4 col-sm-6' >
         
-            <div class='product'>
+        <div class='product'>
+        
+            <a href='details.php?pro_id=$pro_id'>
             
-                <a href='details.php?pro_id=$pro_id'>
-                
-                    <img class='img-responsive' src='admin_area/product_images/$pro_img1'>
-                
-                </a>
-                
-                <div class='text'>
-
-                <center>
-                
-                    <p class='btn btn-primary'> $manufacturer_title </p>
-                
-                </center>
-                
-                <center>
-                
-                <h3>
+                <img class='img-responsive' src='admin_area/product_images/$pro_img1'>
             
-                <a href='details.php?pro_id=$pro_id'>
-
-                    $pro_title
-
-                </a>
+            </a>
             
-               </h3>
+            <div class='text'>
+
+
+
+            <center>
             
-               </center>
-                   
-                    
-                    <p class='price'>
-                    
-                    $product_price &nbsp;$product_sale_price
-                    
-                    </p>
-                    
-                    <p class='button'>
-                    
-                        <a class='btn btn-default' href='details.php?pro_id=$pro_id'>
-
-                            View Details
-
-                        </a>
-                    
-                        <a class='btn btn-primary' href='details.php?pro_id=$pro_id'>
-
-                            <i class='fa fa-shopping-cart'></i> Add to Cart
-
-                        </a>
-                    
-                    </p>
+            <h3 >
+        
+                    <a class='manu_title' href='details.php?pro_id=$pro_id'>$pro_title</a>
                 
-                </div>
+                </h3>
 
-                $product_label
+                
+        
+            </center>
+
+
+            <div class='row'  style=\" padding-bottom: 7px \">
+
+            <div class='col-md-6'>
+            
+            
+            <p class='price'>
+                
+                $product_price &nbsp;$product_sale_price
+                
+                </p>
+            </div>
+
+            <div class='col-md-6 ' style=\"float:right \"/>
+            
+            <div class='icon_in_product '>
+
+    
+        <a class='btn btn-primary shopping' href='details.php?pro_id=$pro_id'  style=\"float:right \" >
+
+            <i class='fa fa-shopping-cart'   style=\" font-size: 23px \"></i>
+
+        </a>
+
+        </div>
+            </div>
             
             </div>
-        
-        </div>
+            
+                
+                
+                
+                
+            
+                
+                   
+                
+              
+            
+            </div>
+            $product_label</div>
+    
+    </div>
         
         ";
         

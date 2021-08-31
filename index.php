@@ -96,7 +96,7 @@
               ?>
 
              <div class="col-sm-4">
-                 <div class="box same-height">
+                 <div class="box same-height ">
                     <div class="icon">
                        <i class="fa fa-heart"></i>
                    </div>
@@ -112,14 +112,14 @@
 
 </div> <!--advantages Finish-->
   <div id="hot"><!--hot begin-->
-      <div class="box"><!--box begin-->
+      <div class="box "><!--box begin-->
           <div class="container">
               <h2>Our Latest Products</h2>
           </div>
       </div><!--box finish-->
   </div><!--hot finish-->
-  <div id="content" class="container">
-      <div class="row">
+  <div id="content" class="container animate__animated animate__bounce">
+      <div class="row ">
          <?php
            getPro();
          ?>

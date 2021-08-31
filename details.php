@@ -376,7 +376,7 @@ if(isset($_GET['pro_id'])){
 
                                         echo "
 
-                                            <p class='price'>
+                                            <p class='details_price'>
 
                                             PRICE: <del> $$pro_price</del><br/>
 
@@ -390,7 +390,7 @@ if(isset($_GET['pro_id'])){
 
                                         echo "
 
-                                            <p class='price'>
+                                            <p class='details_price'>
 
                                             PRICE: $ $pro_price
 
@@ -527,64 +527,78 @@ if(isset($_GET['pro_id'])){
                     
                     echo "
                     
-                    <div class='col-md-3 col-sm-6 center-responsive'>
-                    
-                        <div class='product'>
-                        
-                            <a href='details.php?pro_id=$pro_id'>
-                            
-                                <img class='img-responsive' src='admin_area/product_images/$pro_img1'>
-                            
-                            </a>
-                            
-                            <div class='text'>
+                
+        <div class='col-md-3 col-sm-6 center-responsive' >
+        
+        <div class='product'>
+        
+            <a href='details.php?pro_id=$pro_id'>
             
-                            <center>
-                            
-                                <p class='btn btn-primary'> $manufacturer_title </p>
-                            
-                            </center>
-                            
-                                <h3>
-                        
-                                    <a href='details.php?pro_id=$pro_id'>
+                <img class='img-responsive' src='admin_area/product_images/$pro_img1'>
             
-                                        $pro_title
+            </a>
             
-                                    </a>
-                                
-                                </h3>
-                                
-                                <p class='price'>
-                                
-                                $product_price &nbsp;$product_sale_price
-                                
-                                </p>
-                                
-                                <p class='button'>
-                                
-                                    <a class='btn btn-default' href='details.php?pro_id=$pro_id'>
+            <div class='text'>
+
+
+
+            <center>
             
-                                        View Details
+            <h3 >
+        
+                    <a class='manu_title' href='details.php?pro_id=$pro_id'>$pro_title</a>
+                
+                </h3>
+
+                
+        
+            </center>
+
+
+            <div class='row'  style=\" margin-bottom: 7px \">
+
+            <div class='col-md-8'>
             
-                                    </a>
-                                
-                                    <a class='btn btn-primary' href='details.php?pro_id=$pro_id'>
             
-                                        <i class='fa fa-shopping-cart'></i> Add to Cart
+            <p class='price'>
+                
+                $product_price &nbsp;$product_sale_price
+                
+                </p>
+            </div>
+
+            <div class='col-md-4 ' style=\"float:right \"/>
             
-                                    </a>
-                                
-                                </p>
-                            
-                            </div>
+            <div class='icon_in_product '>
+
+    
+        <a class='btn btn-primary shopping' href='details.php?pro_id=$pro_id'  style=\"float:right \" >
+
+            <i class='fa fa-shopping-cart'   style=\" font-size: 23px \"></i>
+
+        </a>
+
+        </div>
+            </div>
             
-                            $product_label
-                        
-                        </div>
-                    
-                    </div>
-                    
+            </div>
+            
+                
+                
+                
+                
+            
+                
+                   
+                
+              
+            
+            </div>
+            $product_label</div>
+    
+    </div>
+        
+        
                     ";
                        
                    }
