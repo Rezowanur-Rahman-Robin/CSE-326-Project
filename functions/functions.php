@@ -159,7 +159,7 @@ function getPro(){
 
 
 
-        <div class='col-md-4 col-sm-6 single m-1 ' >
+        <div class='col-md-3 col-sm-6  ' >
         
         <div class='product'>
         
@@ -188,7 +188,7 @@ function getPro(){
 
             <div class='row'  style=\" padding-bottom: 7px \">
 
-            <div class='col-md-6'>
+            <div class='col-md-9'>
             
             
             <p class='price'>
@@ -198,7 +198,7 @@ function getPro(){
                 </p>
             </div>
 
-            <div class='col-md-6 ' style=\"float:right \"/>
+            <div class='col-md-3 ' style=\"float:right \"/>
             
             <div class='icon_in_product '>
 

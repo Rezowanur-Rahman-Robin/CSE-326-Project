@@ -120,7 +120,7 @@
                                        
                                        <td>
                                            
-                                           <?php echo $pro_sale; ?>
+                                           <?php echo $pro_sale==null? $pro_price : $pro_sale; ?>
                                            
                                        </td>
                                        
@@ -214,7 +214,8 @@
                         $code = $_POST['code'];
 
                         if($code == ""){
-
+                            
+                            echo "<script>alert('Please Enter Coupon Code.')</script>";
                         }else{
 
                             $get_coupons = "select * from coupons where coupon_code='$code'";
