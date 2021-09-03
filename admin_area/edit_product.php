@@ -81,7 +81,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Edit Products </title>
+    <title> Insert Products </title>
 </head>
 <body>
     
@@ -113,7 +113,7 @@
                
                <h3 class="panel-title"><!-- panel-title Begin -->
                    
-                   <i class="fa fa-money fa-fw"></i> Edit Product 
+                   <i class="fa fa-money fa-fw"></i> Insert Product 
                    
                </h3><!-- panel-title Finish -->
                

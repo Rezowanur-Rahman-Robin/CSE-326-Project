@@ -114,7 +114,7 @@
                                 <td> <?php echo $pro_date ?> </td>
                                 <td> 
                                      
-                                     <a class="btn btn-danger" href="index.php?delete_product=<?php echo $pro_id; ?>">
+                                     <a href="index.php?delete_product=<?php echo $pro_id; ?>">
                                      
                                         <i class="fa fa-trash-o"></i> Delete
                                     
@@ -123,7 +123,7 @@
                                 </td>
                                 <td> 
                                      
-                                     <a class="btn btn-info" href="index.php?edit_product=<?php echo $pro_id; ?>">
+                                     <a href="index.php?edit_product=<?php echo $pro_id; ?>">
                                      
                                         <i class="fa fa-pencil"></i> Edit
                                     
