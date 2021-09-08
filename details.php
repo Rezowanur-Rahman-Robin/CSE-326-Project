@@ -74,10 +74,12 @@ if(isset($_GET['pro_id'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>M-Dev Store</title>
+    <title>Rob Store</title>
     <link rel="stylesheet" href="styles/bootstrap-337.min.css">
     <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/customize_forkan.css">
+
 </head>
 <body>
    
@@ -98,6 +100,23 @@ if(isset($_GET['pro_id'])){
                    }else{
                        
                        echo "Welcome: " . $_SESSION['customer_email'] . "";
+
+
+$customer_session = $_SESSION['customer_email'];
+
+$get_customer = "select * from customers where customer_email='$customer_session'";
+
+$run_customer = mysqli_query($con,$get_customer);
+
+$row_customer = mysqli_fetch_array($run_customer);
+
+$customer_id = $row_customer['customer_id'];
+
+$customer_name = $row_customer['customer_name'];
+
+$customer_image = $row_customer['customer_image'];
+
+//echo"<script>alert('$customer_name')  </script>";
                        
                    }
                    
@@ -456,6 +475,149 @@ if(isset($_GET['pro_id'])){
                        <hr>
                    
                </div><!-- box Finish -->
+
+               <div class="comment-section">
+  <div class="commentContainer"> 
+    <div class="review">
+      <h2 class="R-title">Comments</h2>
+      <div class="comment-section">
+
+      <?php 
+        
+        $get_comment = "select * from comments where comment_product_id='$product_id'";
+
+        $run_comment = mysqli_query($con,$get_comment);
+
+        $i = 0;
+
+        while($row_comment = mysqli_fetch_array($run_comment)){
+
+            $my_comment_user_id = $row_comment['comment_user_id'];
+
+            $my_comment_post = $row_comment['comment_post'];
+
+            $my_comment_time = $row_comment['comment_time'];
+
+            $my_comment_rating = $row_comment['comment_rating'];
+
+$get_customer = "select * from customers where customer_id='$my_comment_user_id'";
+
+$run_customer_comment = mysqli_query($con,$get_customer);
+
+$row_customer_comment = mysqli_fetch_array($run_customer_comment);
+
+$customer_id_comment = $row_customer_comment['customer_id'];
+
+$customer_name_comment = $row_customer_comment['customer_name'];
+
+$customer_image_comment = $row_customer_comment['customer_image'];
+
+
+
+            $i++;
+
+            $rating = "";
+
+            for($p=0;$p<5;$p++){
+
+             if($p<$my_comment_rating){
+                $rating = $rating . "<li><i class='fa fa-star'></i></li> ";
+            }else{
+                $rating = $rating . "<li ><i class='fa fa-star-o'></i></li>";
+            }
+
+           }
+
+       echo 
+       "
+       <div class='media media-review'>
+       <div class='media-user'>
+           <img src='customer/customer_images/$customer_image_comment' alt=''>
+           <div class='M-flex'>
+           <h2 class='title'><span>$customer_name_comment </span> $my_comment_time </h2>
+           <div class='rating-row'>
+             <ul>"
+            .
+              
+           $rating
+
+             .
+
+             "
+               
+             </ul>
+           </div>
+         </div>
+         
+         </div>
+       <div class='media-body'>
+        
+         <div class='description'>$my_comment_post</div>
+       </div>
+     </div>";
+
+     }  ?>
+ 
+
+      </div>
+
+      <div class="add_new_comment">
+<form  method="post" class="form-horizontal m-3" enctype="multipart/form-data">
+
+ <div class="form-group" style="margin:0">
+    <label for="exampleFormControlSelect1">Ratings</label>
+    <select class="form-control" id="exampleFormControlSelect1" name="myRating" >
+
+     
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </div>
+
+
+  <div class="form-group" style="margin:0">
+    <label for="exampleFormControlTextarea1">Add a new comment</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" name="myComment" rows="3"></textarea>
+    <input name="submit" value="Post" type="submit" class="btn btn-success mt-5" style="margin-top:10px" />
+  </div>
+</form>
+
+<?php
+
+if(isset($_POST['submit'])){
+	$c_post = $_POST['myComment'];
+	$c_rating = $_POST['myRating'];
+	$c_time = date("Y-m-d h");
+
+    
+
+    $insert_comment = "insert into comments (comment_user_id,comment_post,comment_time,comment_rating,comment_product_id) 
+    values ('$customer_id','$c_post','$c_time','$c_rating','$product_id')";
+
+    $run_comment = mysqli_query($con,$insert_comment);
+
+    if($run_comment){
+        echo "<script>alert('Comment has been inserted sucessfully')</script>";
+        echo"<script>window.open('details.php?pro_id=$product_id','_self')  </script>";
+    }else{
+        echo "<script>alert('Comment inserting Failed!!!!')</script>";
+    }
+	
+	
+	
+	
+}
+
+?>
+
+      </div>
+
+    </div>
+  </div>
+</div>
                
                <div id="row same-heigh-row"><!-- #row same-heigh-row Begin -->
                    <div class="col-md-3 col-sm-6"><!-- col-md-3 col-sm-6 Begin -->
@@ -584,12 +746,7 @@ if(isset($_GET['pro_id'])){
             </div>
             
                 
-                
-                
-                
-            
-                
-                   
+                  
                 
               
             

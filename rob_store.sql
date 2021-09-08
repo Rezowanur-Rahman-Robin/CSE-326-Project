@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 02, 2021 at 04:57 AM
+-- Generation Time: Sep 09, 2021 at 01:12 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.3.27
 
@@ -45,7 +45,6 @@ CREATE TABLE `admins` (
 
 INSERT INTO `admins` (`admin_id`, `admin_name`, `admin_email`, `admin_pass`, `admin_image`, `admin_country`, `admin_about`, `admin_contact`, `admin_job`) VALUES
 (2, 'Tatiana Saphira', 'tatiaCute@gmail.id', 'tatiana123', 'tatiana-saphira.jpg', 'Indonesia', 'Change the about description for Tatiana from chelsea Islan', '2222-2222-2222', 'MyMaid'),
-(4, 'Nozomi Sasaki', 'papipupepo@gmail.jp', 'nozo123', 'Nozomi_Sasaki-.jpg', 'Japan', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui illum debitis dolorum ducimus aut maiores veritatis illo doloremque quibusdam placeat quod velit laudantium eligendi sunt et optio, harum in suscipit.', '312-009-323', 'MyWife'),
 (5, 'Iko Uwais', 'iko@gmail.id', 'iko123', 'iko.png', 'Indonesia', 'This is for IKO', '081806833157', 'Fighter / Actor'),
 (6, 'Admin', 'robincuetcse@gmail.com', '123456', 'iko.png', 'Bangladesh', 'Software Engineer\r\n', '01795371964', 'Software Engineer');
 
@@ -84,14 +83,6 @@ CREATE TABLE `cart` (
   `p_price` int(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `cart`
---
-
-INSERT INTO `cart` (`p_id`, `ip_add`, `qty`, `size`, `p_price`) VALUES
-(14, '::1', 2, 'Medium', 30),
-(15, '::1', 2, 'Small', 10);
-
 -- --------------------------------------------------------
 
 --
@@ -118,6 +109,42 @@ INSERT INTO `categories` (`cat_id`, `cat_title`, `cat_top`, `cat_image`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `comments`
+--
+
+CREATE TABLE `comments` (
+  `comment_id` int(100) NOT NULL,
+  `comment_user_id` int(100) NOT NULL,
+  `comment_post` varchar(5000) NOT NULL,
+  `comment_rating` int(10) NOT NULL,
+  `comment_time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `comment_product_id` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `comments`
+--
+
+INSERT INTO `comments` (`comment_id`, `comment_user_id`, `comment_post`, `comment_rating`, `comment_time`, `comment_product_id`) VALUES
+(1, 7, 'Forkan', 2, '2021-09-08 21:54:01', 17),
+(2, 7, 'fasdfasdf', 1, '2021-09-08 21:54:04', 17),
+(3, 7, 'fasfasdfasd', 2, '2021-09-08 21:54:08', 17),
+(4, 7, 'Forkanasdf afd asfd asdf asdf asd fas df asdf as dfas.', 1, '2021-09-08 21:54:10', 17),
+(5, 7, 'adfasd fasd fajsdf sadkfjaskdf askdf asdf asd f asdf dsadfasd fasd fajsdf sadkfjaskdf askdf asdf asd f asdf dsadfasd fasd fajsdf sadkfjaskdf askdf asdf asd f asdf dsadfasd fasd fajsdf sadkfjaskdf askdf asdf asd f asdf dsadfasd fasd fajsdf sadkfjaskdf askdf asdf asd f asdf dsadfasd fasd fajsdf sadkfjaskdf askdf asdf asd f asdf dsadfasd fasd fajsdf sadkfjaskdf askdf asdf asd f asdf dsadfasd fasd fajsdf sadkfjaskdf askdf asdf asd f asdf dsadfasd fasd fajsdf sadkfjaskdf askdf asdf asd f asdf dsadfasd fasd fajsdf sadkfjaskdf askdf asdf asd f asdf dsadfasd fasd fajsdf sadkfjaskdf askdf asdf asd f asdf dsadfasd fasd fajsdf sadkfjaskdf askdf asdf asd f asdf dsadfasd fasd fajsdf sadkfjaskdf askdf asdf asd f asdf dsadfasd fasd fajsdf sadkfjaskdf askdf asdf asd f asdf ds', 1, '2021-09-08 21:54:14', 17),
+(6, 7, 'Try....', 2, '2021-09-08 05:00:00', 17),
+(7, 7, 'Try....', 2, '2021-09-09 06:00:00', 17),
+(8, 7, 'Try....', 2, '2021-09-09 06:00:00', 17),
+(9, 7, 'Try....', 2, '2021-09-09 06:00:00', 17),
+(10, 7, 'Yessss1111', 2, '2021-09-09 06:00:00', 17),
+(11, 7, 'Yessss1111', 2, '2021-09-09 06:00:00', 17),
+(12, 7, 'fasdfasdfsaf', 2, '2021-09-09 06:00:00', 11),
+(13, 7, 'Good Product', 4, '2021-09-09 06:00:00', 11),
+(14, 9, 'Cuet is the Best.', 3, '2021-09-09 06:00:00', 11),
+(15, 9, '২০২২ সালের এইচএসসি ৮ম সপ্তাহের এসাইনমেন্ট সমাধান /উত্তর | এইচএসসি এসাইনমেন্ট ২০২২ উত্তর ৮ম সপ্তাহ PDF\r\nAdminSeptember 05, 2021\r\n\r\n \r\n  \r\n\r\n২০২২ সালের এইচএসসি পরীক্ষার এসাইনমেন্ট ৮ম/অষ্টম সপ্তাহের উত্তর/সমাধান | এইচএসসি ২০২২ সালের ৮ম সপ্তাহের এসাইনমেন্ট সমাধান /উত্তর | এইচএসসি এসাইনমেন্ট ২০২২ উত্তর/সমাধান ৮ম সপ্তাহ PDF Download\r\n\r\n \r\n\r\n    Table Of Contents    \r\n২০২২ সালের এইচএসসি পরীক্ষার এসাইনমেন্ট ৮ম/অষ্টম সপ্তাহের উত্তর\r\nএইচএসসি ৮ম সপ্তাহের এসাইনমেন্ট ২০২২ PD', 1, '2021-09-08 19:00:00', 11);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `coupons`
 --
 
@@ -136,8 +163,7 @@ CREATE TABLE `coupons` (
 --
 
 INSERT INTO `coupons` (`coupon_id`, `coupon_title`, `coupon_price`, `coupon_code`, `coupon_used`, `coupon_limit`, `product_id`) VALUES
-(1, 'Testing Coupon', 30, '123456', 3, 500, 14),
-(2, 'Testing Coupon', NULL, '1234567', 0, 50, 20);
+(1, 'Testing Coupon', 30, '123456', 4, 500, 14);
 
 -- --------------------------------------------------------
 
@@ -164,7 +190,7 @@ CREATE TABLE `customers` (
 
 INSERT INTO `customers` (`customer_id`, `customer_name`, `customer_email`, `customer_pass`, `customer_country`, `customer_city`, `customer_contact`, `customer_address`, `customer_image`, `customer_ip`) VALUES
 (7, 'Robin', 'robin@gmai.com', '123456', 'Bangladesh', 'Dhaka', '017837458345', 'Mirpur, Dhaka-1206', '7d1a3f77eee9f34782c6f88e97a6c888.jpg', '::1'),
-(8, 'Robin', 'robin@gmai.com', '123456', 'Bangladesh', 'Dhaka', '017837458345', 'Mirpur, Dhaka-1206', '7d1a3f77eee9f34782c6f88e97a6c888.jpg', '::1');
+(9, 'Forkan Ullah', 'forkan@gmail.com', '123456', 'Banglladesh', 'Comilla', '01795371945', 'Mirpur 14', 'CUET_Vector_ogo.svg', '::1');
 
 -- --------------------------------------------------------
 
@@ -196,7 +222,10 @@ INSERT INTO `customer_orders` (`order_id`, `customer_id`, `due_amount`, `invoice
 (16, 7, 90, 448193817, 2, 'Small', '2021-08-25', 'pending'),
 (17, 7, 136, 448193817, 2, 'Small', '2021-08-25', 'pending'),
 (18, 7, 30, 620725880, 3, 'Small', '2021-08-25', 'Complete'),
-(19, 7, 10, 1798439149, 1, 'Medium', '2021-08-26', 'pending');
+(19, 7, 10, 1798439149, 1, 'Medium', '2021-08-26', 'pending'),
+(20, 7, 20, 230081619, 2, 'Small', '2021-09-04', 'Complete'),
+(21, 7, 600, 1843238128, 2, 'Medium', '2021-09-09', 'pending'),
+(22, 7, 98, 1843238128, 1, 'Medium', '2021-09-09', 'Complete');
 
 -- --------------------------------------------------------
 
@@ -247,7 +276,9 @@ INSERT INTO `payments` (`payment_id`, `invoice_no`, `amount`, `payment_mode`, `r
 (7, 1231231, 1313, 'Back Code', 123132, 123123, '123123'),
 (8, 42412342, 3234, 'Paypall', 34123, 2147483647, '20:10:2020'),
 (9, 42412342, 3234, 'Paypall', 34123, 2147483647, '20:10:2021'),
-(10, 42412342, 3234, 'Paypall', 34123, 2147483647, '20:10:2020');
+(10, 42412342, 3234, 'Paypall', 34123, 2147483647, '20:10:2020'),
+(11, 42412342, 3234, 'Back Code', 34123, 2147483647, '20:10:2020'),
+(12, 42412342, 3234, 'Paypall', 34123, 123456, '20:10:2021');
 
 -- --------------------------------------------------------
 
@@ -275,7 +306,10 @@ INSERT INTO `pending_orders` (`order_id`, `customer_id`, `invoice_no`, `product_
 (14, 7, 448193817, '12', 2, 'Small', 'pending'),
 (15, 7, 448193817, '17', 2, 'Small', 'Complete'),
 (16, 7, 620725880, '15', 3, 'Small', 'pending'),
-(17, 7, 1798439149, '15', 1, 'Medium', 'pending');
+(17, 7, 1798439149, '15', 1, 'Medium', 'pending'),
+(18, 7, 230081619, '15', 2, 'Small', 'pending'),
+(19, 7, 1843238128, '10', 2, 'Medium', 'pending'),
+(20, 7, 1843238128, '14', 1, 'Medium', 'pending');
 
 -- --------------------------------------------------------
 
@@ -419,6 +453,12 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`cat_id`);
 
 --
+-- Indexes for table `comments`
+--
+ALTER TABLE `comments`
+  ADD PRIMARY KEY (`comment_id`);
+
+--
 -- Indexes for table `coupons`
 --
 ALTER TABLE `coupons`
@@ -501,6 +541,12 @@ ALTER TABLE `categories`
   MODIFY `cat_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `comments`
+--
+ALTER TABLE `comments`
+  MODIFY `comment_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
 -- AUTO_INCREMENT for table `coupons`
 --
 ALTER TABLE `coupons`
@@ -510,13 +556,13 @@ ALTER TABLE `coupons`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `customer_orders`
 --
 ALTER TABLE `customer_orders`
-  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `manufacturers`
@@ -528,13 +574,13 @@ ALTER TABLE `manufacturers`
 -- AUTO_INCREMENT for table `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `payment_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `payment_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `pending_orders`
 --
 ALTER TABLE `pending_orders`
-  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `products`
