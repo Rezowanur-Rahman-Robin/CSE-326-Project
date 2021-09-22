@@ -1,4 +1,4 @@
-<div class="box"><!-- box Begin -->
+<div class="boxes"><!-- box Begin -->
     <?php
        $session_email =$_SESSION['customer_email'];
        $select_customer="select * from customers where customer_email='$session_email'";

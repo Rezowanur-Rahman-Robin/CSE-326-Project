@@ -118,7 +118,7 @@
           </div>
       </div><!--box finish-->
   </div><!--hot finish-->
-  <div id="content" class="container animate__animated animate__bounce">
+  <div id="content" class="container ">
       <div class="row ">
          <?php
            getPro();

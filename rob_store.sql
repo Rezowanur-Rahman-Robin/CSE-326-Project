@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 09, 2021 at 01:12 AM
+-- Generation Time: Sep 19, 2021 at 10:40 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.3.27
 
@@ -104,7 +104,7 @@ INSERT INTO `categories` (`cat_id`, `cat_title`, `cat_top`, `cat_image`) VALUES
 (1, 'Man', 'yes', 'men.jpg'),
 (2, 'Women', 'yes', 'women.jpg'),
 (3, 'Kids', 'no', 'kid.jpg'),
-(4, 'Other', 'no', 'other.png');
+(4, 'Others', 'no', 'other.png');
 
 -- --------------------------------------------------------
 
@@ -140,7 +140,9 @@ INSERT INTO `comments` (`comment_id`, `comment_user_id`, `comment_post`, `commen
 (12, 7, 'fasdfasdfsaf', 2, '2021-09-09 06:00:00', 11),
 (13, 7, 'Good Product', 4, '2021-09-09 06:00:00', 11),
 (14, 9, 'Cuet is the Best.', 3, '2021-09-09 06:00:00', 11),
-(15, 9, '২০২২ সালের এইচএসসি ৮ম সপ্তাহের এসাইনমেন্ট সমাধান /উত্তর | এইচএসসি এসাইনমেন্ট ২০২২ উত্তর ৮ম সপ্তাহ PDF\r\nAdminSeptember 05, 2021\r\n\r\n \r\n  \r\n\r\n২০২২ সালের এইচএসসি পরীক্ষার এসাইনমেন্ট ৮ম/অষ্টম সপ্তাহের উত্তর/সমাধান | এইচএসসি ২০২২ সালের ৮ম সপ্তাহের এসাইনমেন্ট সমাধান /উত্তর | এইচএসসি এসাইনমেন্ট ২০২২ উত্তর/সমাধান ৮ম সপ্তাহ PDF Download\r\n\r\n \r\n\r\n    Table Of Contents    \r\n২০২২ সালের এইচএসসি পরীক্ষার এসাইনমেন্ট ৮ম/অষ্টম সপ্তাহের উত্তর\r\nএইচএসসি ৮ম সপ্তাহের এসাইনমেন্ট ২০২২ PD', 1, '2021-09-08 19:00:00', 11);
+(15, 9, '২০২২ সালের এইচএসসি ৮ম সপ্তাহের এসাইনমেন্ট সমাধান /উত্তর | এইচএসসি এসাইনমেন্ট ২০২২ উত্তর ৮ম সপ্তাহ PDF\r\nAdminSeptember 05, 2021\r\n\r\n \r\n  \r\n\r\n২০২২ সালের এইচএসসি পরীক্ষার এসাইনমেন্ট ৮ম/অষ্টম সপ্তাহের উত্তর/সমাধান | এইচএসসি ২০২২ সালের ৮ম সপ্তাহের এসাইনমেন্ট সমাধান /উত্তর | এইচএসসি এসাইনমেন্ট ২০২২ উত্তর/সমাধান ৮ম সপ্তাহ PDF Download\r\n\r\n \r\n\r\n    Table Of Contents    \r\n২০২২ সালের এইচএসসি পরীক্ষার এসাইনমেন্ট ৮ম/অষ্টম সপ্তাহের উত্তর\r\nএইচএসসি ৮ম সপ্তাহের এসাইনমেন্ট ২০২২ PD', 1, '2021-09-08 19:00:00', 11),
+(16, 7, 'Testing...', 4, '2021-09-19 03:00:00', 15),
+(17, 7, 'Now..', 3, '2021-09-19 03:00:00', 15);
 
 -- --------------------------------------------------------
 
@@ -163,7 +165,9 @@ CREATE TABLE `coupons` (
 --
 
 INSERT INTO `coupons` (`coupon_id`, `coupon_title`, `coupon_price`, `coupon_code`, `coupon_used`, `coupon_limit`, `product_id`) VALUES
-(1, 'Testing Coupon', 30, '123456', 4, 500, 14);
+(1, 'Testing Coupon', 30, '123456', 4, 500, 14),
+(5, 'Eid Offer', 60, '12345', 1, 8, 17),
+(6, 'Eid Offer', 100, '1234567', 1, 5, 10);
 
 -- --------------------------------------------------------
 
@@ -190,7 +194,8 @@ CREATE TABLE `customers` (
 
 INSERT INTO `customers` (`customer_id`, `customer_name`, `customer_email`, `customer_pass`, `customer_country`, `customer_city`, `customer_contact`, `customer_address`, `customer_image`, `customer_ip`) VALUES
 (7, 'Robin', 'robin@gmai.com', '123456', 'Bangladesh', 'Dhaka', '017837458345', 'Mirpur, Dhaka-1206', '7d1a3f77eee9f34782c6f88e97a6c888.jpg', '::1'),
-(9, 'Forkan Ullah', 'forkan@gmail.com', '123456', 'Banglladesh', 'Comilla', '01795371945', 'Mirpur 14', 'CUET_Vector_ogo.svg', '::1');
+(9, 'Forkan Ullah', 'forkan@gmail.com', '123456', 'Banglladesh', 'Comilla', '01795371945', 'Mirpur 14', 'CUET_Vector_ogo.svg', '::1'),
+(10, 'Abdullah Hossain', 'forkan@gmail.com', '123456', 'Bangladesh', 'Inside Dhaka Metro City', '01795371965', 'Mirpur fasdjfasdfa sdf ads as df asdfsa', 'jty32.png', '::1');
 
 -- --------------------------------------------------------
 
@@ -225,7 +230,15 @@ INSERT INTO `customer_orders` (`order_id`, `customer_id`, `due_amount`, `invoice
 (19, 7, 10, 1798439149, 1, 'Medium', '2021-08-26', 'pending'),
 (20, 7, 20, 230081619, 2, 'Small', '2021-09-04', 'Complete'),
 (21, 7, 600, 1843238128, 2, 'Medium', '2021-09-09', 'pending'),
-(22, 7, 98, 1843238128, 1, 'Medium', '2021-09-09', 'Complete');
+(22, 7, 98, 1843238128, 1, 'Medium', '2021-09-09', 'Complete'),
+(23, 7, 300, 1981925736, 1, 'Medium', '2021-09-09', 'Complete'),
+(24, 7, 121, 1524371719, 1, 'Medium', '2021-09-20', 'pending'),
+(25, 7, 55, 1524371719, 1, 'Medium', '2021-09-20', 'pending'),
+(26, 7, 103, 1524371719, 1, 'Small', '2021-09-20', 'pending'),
+(27, 7, 422, 1524371719, 2, 'Medium', '2021-09-20', 'pending'),
+(28, 7, 10, 1524371719, 1, 'Medium', '2021-09-20', 'pending'),
+(29, 9, 103, 1137975461, 1, 'Small', '2021-09-20', 'pending'),
+(30, 9, 136, 1137975461, 2, 'Medium', '2021-09-20', 'pending');
 
 -- --------------------------------------------------------
 
@@ -278,7 +291,9 @@ INSERT INTO `payments` (`payment_id`, `invoice_no`, `amount`, `payment_mode`, `r
 (9, 42412342, 3234, 'Paypall', 34123, 2147483647, '20:10:2021'),
 (10, 42412342, 3234, 'Paypall', 34123, 2147483647, '20:10:2020'),
 (11, 42412342, 3234, 'Back Code', 34123, 2147483647, '20:10:2020'),
-(12, 42412342, 3234, 'Paypall', 34123, 123456, '20:10:2021');
+(12, 42412342, 3234, 'Paypall', 34123, 123456, '20:10:2021'),
+(13, 42412342, 3234, 'Paypall', 43123423, 4131243, '20:10:2020'),
+(14, 0, 0, 'Back Code', 0, 0, 'afdsasdfd');
 
 -- --------------------------------------------------------
 
@@ -303,13 +318,21 @@ CREATE TABLE `pending_orders` (
 INSERT INTO `pending_orders` (`order_id`, `customer_id`, `invoice_no`, `product_id`, `qty`, `size`, `order_status`) VALUES
 (12, 7, 2078162073, '7', 2, 'Small', 'pending'),
 (13, 7, 2078162073, '17', 1, 'Small', 'pending'),
-(14, 7, 448193817, '12', 2, 'Small', 'pending'),
+(14, 7, 448193817, '12', 2, 'Small', 'Complete'),
 (15, 7, 448193817, '17', 2, 'Small', 'Complete'),
 (16, 7, 620725880, '15', 3, 'Small', 'pending'),
 (17, 7, 1798439149, '15', 1, 'Medium', 'pending'),
 (18, 7, 230081619, '15', 2, 'Small', 'pending'),
 (19, 7, 1843238128, '10', 2, 'Medium', 'pending'),
-(20, 7, 1843238128, '14', 1, 'Medium', 'pending');
+(20, 7, 1843238128, '14', 1, 'Medium', 'pending'),
+(21, 7, 1981925736, '10', 1, 'Medium', 'pending'),
+(22, 7, 1524371719, '2', 1, 'Medium', 'pending'),
+(23, 7, 1524371719, '3', 1, 'Medium', 'pending'),
+(24, 7, 1524371719, '5', 1, 'Small', 'pending'),
+(25, 7, 1524371719, '6', 2, 'Medium', 'pending'),
+(26, 7, 1524371719, '15', 1, 'Medium', 'pending'),
+(27, 9, 1137975461, '5', 1, 'Small', 'pending'),
+(28, 9, 1137975461, '17', 2, 'Medium', 'pending');
 
 -- --------------------------------------------------------
 
@@ -544,25 +567,25 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `comment_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `comment_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `coupons`
 --
 ALTER TABLE `coupons`
-  MODIFY `coupon_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `coupon_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `customer_orders`
 --
 ALTER TABLE `customer_orders`
-  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `manufacturers`
@@ -574,13 +597,13 @@ ALTER TABLE `manufacturers`
 -- AUTO_INCREMENT for table `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `payment_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `payment_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `pending_orders`
 --
 ALTER TABLE `pending_orders`
-  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `products`

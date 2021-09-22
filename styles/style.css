@@ -246,7 +246,14 @@ div.single {
 
 @media (max-width: 798px) {
   div.single {
-    width: 60%;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 498px) {
+  div.single {
+    width: 100%;
     margin: 0 auto;
   }
 }
@@ -259,7 +266,7 @@ div.product {
 }
 
 div.text {
-  padding: 0px 10px 0px;
+  padding: 0px 10px 10px;
 }
 
 p.price {
@@ -267,7 +274,6 @@ p.price {
   text-align: center;
   color: #666367;
   font-weight: 700;
-  float: left;
 }
 
 p.button {
@@ -277,10 +283,13 @@ p.button {
 
 /* Footer style  */
 div#footer {
-  background: #e0e0e0 !important;
+  background: #673ab7 !important;
   padding: 10px 0px;
-  display: inline-block;
   width: 100%;
+  color: #ffffff;
+}
+.text-muted {
+  color: #fff;
 }
 
 div#footer ul {
@@ -289,13 +298,13 @@ div#footer ul {
 }
 
 div#footer ul a {
-  color: #474444;
+  color: #ffffff;
   padding: 10px 0px;
   text-decoration: none;
 }
 
 div#footer ul a:hover {
-  color: #666666;
+  color: #cacaca;
 }
 
 div#footer.social {
@@ -312,7 +321,7 @@ div#footer p.social a {
   line-height: 30px;
   font-size: 15px;
   text-align: center;
-  background: #555555;
+  background: #00bcd4;
   vertical-align: bottom;
 }
 
@@ -351,14 +360,38 @@ div#content ul.breadcrumb > li + li:before {
     padding: 8px 0px;
     text-align: center;
   }
+  #content div.box {
+    background: #fff;
+
+    width: 70%;
+  }
 }
 
 #content div.box {
   background: #fff;
   padding: 20px;
   font-size: 15px;
+  box-shadow: 0px 1px 5px rgb(0 0 0 / 40%);
+  width: 50%;
+  display: block;
+  margin: 20px auto;
+}
+
+#content div.boxes {
+  background: #fff;
+  padding: 20px;
+  font-size: 15px;
   margin-bottom: 32px;
   box-shadow: 0px 1px 5px rgb(0, 0, 0, 0.4);
+}
+
+#content div.box-footer {
+  background: #fff;
+  padding: 13px;
+  font-size: 15px;
+  margin-top: 11px;
+  box-shadow: 0px 1px 5px rgb(0 0 0 / 40%);
+  height: 60px;
 }
 
 /*Produt catagories and catagories style*/
@@ -386,6 +419,11 @@ div#content ul.breadcrumb > li + li:before {
   .center-responsive {
     width: 75%;
     margin: 0px auto;
+  }
+  #content div.box {
+    background: #fff;
+
+    width: 100%;
   }
 }
 
@@ -684,4 +722,15 @@ center ul.pagination a:hover:not(.active) {
   text-align: center;
   font-size: 20px;
   font-weight: 500;
+}
+
+@media (max-width: 798px) {
+  #content div.box-footer {
+    height: 135px;
+  }
+
+  #products .row {
+    margin-right: -15px !important;
+    margin-left: -15px !important;
+  }
 }

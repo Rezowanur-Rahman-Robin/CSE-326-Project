@@ -150,9 +150,9 @@ function getPro(){
         
         echo "
         
-        <div class='col-md-4 col-sm-6 single'>
+        <div class='col-md-4 col-sm-6 single '>
         
-            <div class='product'>
+            <div class='product animate__animated animate__fadeInUpBig 	'>
             
                 <a href='details.php?pro_id=$pro_id'>
                 
@@ -466,7 +466,7 @@ function getProducts(){
         
         <div class='col-md-4 col-sm-6 center-responsive '>
         
-            <div class='product'>
+            <div class='product animate__animated  animate__backInRight'>
             
                 <a href='details.php?pro_id=$pro_id'>
                 

@@ -23,7 +23,7 @@ if(isset($_GET['order_id'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>M-Dev Store</title>
+    <title>Rob Store</title>
     <link rel="stylesheet" href="../styles/bootstrap-337.min.css">
     <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/style.css">
@@ -232,7 +232,7 @@ if(isset($_GET['order_id'])){
            
            <div class="col-md-9"><!-- col-md-9 Begin -->
                
-               <div class="box"><!-- box Begin -->
+               <div class="boxes"><!-- box Begin -->
                    
                    <h1 align="center"> Please confirm your payment</h1>
                    

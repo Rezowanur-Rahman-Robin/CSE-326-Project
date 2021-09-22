@@ -3,12 +3,15 @@
   <div class="box-header"><!-- box-header Begin -->
       
       <center><!-- center Begin -->
+
+      
           
-          <h1> Login </h1>
+          <h1> Log in </h1>
+
+
           
           <p class="lead"> Already have our account..? </p>
           
-          <p class="text-muted"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, maxime. Laudantium omnis, ullam, fuga officia provident error corporis consectetur aliquid corrupti recusandae minus ipsam quasi. Perspiciatis nemo, nostrum magni odit! </p>
           
       </center><!-- center Finish -->
       

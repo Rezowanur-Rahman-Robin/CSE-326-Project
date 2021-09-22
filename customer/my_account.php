@@ -22,6 +22,10 @@ include("functions/functions.php");
     <link rel="stylesheet" href="../styles/bootstrap-337.min.css">
     <link rel="stylesheet" href="../font-awsome/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 <body>
    
@@ -215,7 +219,7 @@ include("functions/functions.php");
                
            </div><!-- col-md-12 Finish -->
            
-           <div class="col-md-3"><!-- col-md-3 Begin -->
+           <div class="col-md-3 animate__animated animate__backInLeft "><!-- col-md-3 Begin -->
    
    <?php 
     
@@ -225,9 +229,9 @@ include("functions/functions.php");
                
            </div><!-- col-md-3 Finish -->
            
-           <div class="col-md-9"><!-- col-md-9 Begin -->
+           <div class="col-md-9 animate__animated animate__backInRight "><!-- col-md-9 Begin -->
                
-               <div class="box"><!-- box Begin -->
+               <div class="boxes"><!-- box Begin -->
                    
                    <?php
 

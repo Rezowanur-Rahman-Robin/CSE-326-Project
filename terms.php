@@ -15,7 +15,7 @@ include("includes/header.php");
 
     <div class="col-md-3">
 
-               <div class="box">
+               <div class="boxes">
  
                <ul class="nav nav-pills nav-stacked">
 

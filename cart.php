@@ -21,9 +21,9 @@
                
            </div><!-- col-md-12 Finish -->
            
-           <div id="cart" class="col-md-9"><!-- col-md-9 Begin -->
+           <div id="cart" class="col-md-9 animate__animated animate__backInLeft"><!-- col-md-9 Begin -->
                
-               <div class="box"><!-- box Begin -->
+               <div class="boxes"><!-- box Begin -->
                    
                    <form action="cart.php" method="post" enctype="multipart/form-data"><!-- form Begin -->
                        
@@ -303,7 +303,7 @@
                
                <div id="row same-heigh-row"><!-- #row same-heigh-row Begin -->
                    <div class="col-md-3 col-sm-6"><!-- col-md-3 col-sm-6 Begin -->
-                       <div class="box same-height headline"><!-- box same-height headline Begin -->
+                       <div class="boxes same-height headline"><!-- box same-height headline Begin -->
                            <h3 class="text-center">Products You Maybe Like</h3>
                        </div><!-- box same-height headline Finish -->
                    </div><!-- col-md-3 col-sm-6 Finish -->
@@ -453,9 +453,9 @@
                
            </div><!-- col-md-9 Finish -->
            
-           <div class="col-md-3"><!-- col-md-3 Begin -->
+           <div class="col-md-3 animate__animated animate__backInRight"><!-- col-md-3 Begin -->
                
-               <div id="order-summary" class="box"><!-- box Begin -->
+               <div id="order-summary" class="boxes"><!-- box Begin -->
                    
                    <div class="box-header"><!-- box-header Begin -->
                        

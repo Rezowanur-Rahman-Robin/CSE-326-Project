@@ -160,6 +160,11 @@ include("functions/functions.php");
                        <li class="<?php if($active=='Cart') echo"active"; ?> header__list">
                            <a href="cart.php">Shopping Cart</a>
                        </li>
+
+                       <li class="<?php if($active=='Blog') echo"active"; ?> header__list">
+                           <a href="blog.php">Blog</a>
+                       </li>
+
                        <li class="<?php if($active=='Contact') echo"active"; ?> header__list">
                            <a href="contact.php">Contact Us</a>
                        </li>

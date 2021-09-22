@@ -350,7 +350,7 @@ $customer_image = $row_customer['customer_image'];
                    </div><!-- col-sm-6 Finish -->
                    
                    <div class="col-sm-6"><!-- col-sm-6 Begin -->
-                       <div class="box"><!-- box Begin -->
+                       <div class="boxes"><!-- box Begin -->
                            <h1 class="text-center"> <?php echo $pro_title; ?> </h1>
                            
                            <?php add_cart(); ?>
@@ -454,7 +454,7 @@ $customer_image = $row_customer['customer_image'];
                    
                </div><!-- row Finish -->
                
-               <div class="box" id="details"><!-- box Begin -->
+               <div class="boxes" id="details"><!-- box Begin -->
                        
                        <h4>Product Details</h4>
                    
@@ -619,9 +619,9 @@ if(isset($_POST['submit'])){
   </div>
 </div>
                
-               <div id="row same-heigh-row"><!-- #row same-heigh-row Begin -->
+               <div id="row same-heigh-row" style="margin-top: 30px;"><!-- #row same-heigh-row Begin -->
                    <div class="col-md-3 col-sm-6"><!-- col-md-3 col-sm-6 Begin -->
-                       <div class="box same-height headline"><!-- box same-height headline Begin -->
+                       <div class="boxes same-height headline"><!-- box same-height headline Begin -->
                            <h3 class="text-center">Products You Maybe Like</h3>
                        </div><!-- box same-height headline Finish -->
                    </div><!-- col-md-3 col-sm-6 Finish -->

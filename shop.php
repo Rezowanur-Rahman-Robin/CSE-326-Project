@@ -20,7 +20,7 @@
                
            </div><!-- col-md-12 Finish -->
            
-           <div class="col-md-3"><!-- col-md-3 Begin -->
+           <div class="col-md-3 animate__animated  animate__backInLeft"><!-- col-md-3 Begin -->
    
    <?php 
     
@@ -32,12 +32,7 @@
            
            <div class="col-md-9"><!-- col-md-9 Begin -->
 
-                <div class='box'><!-- box Begin -->
-                    <h1>Shop</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo deleniti accusamus, consequuntur illum quasi ut. Voluptate a, ipsam repellendus ut fugiat minima? Id facilis itaque autem, officiis veritatis perferendis, quaerat!
-                    </p>
-                </div><!-- box Finish -->
+           
                
                <div id="products" ><!-- row Begin -->
 

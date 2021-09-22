@@ -217,7 +217,7 @@ include("functions/functions.php");
            
            <div id="cart" class="col-md-9"><!-- col-md-9 Begin -->
                
-               <div class="box"><!-- box Begin -->
+               <div class="boxes"><!-- box Begin -->
                    
                    <form action="cart.php" method="post" enctype="multipart/form-data"><!-- form Begin -->
                        
@@ -423,7 +423,7 @@ include("functions/functions.php");
                
                <div id="row same-heigh-row"><!-- #row same-heigh-row Begin -->
                    <div class="col-md-3 col-sm-6"><!-- col-md-3 col-sm-6 Begin -->
-                       <div class="box same-height headline"><!-- box same-height headline Begin -->
+                       <div class="boxes same-height headline"><!-- box same-height headline Begin -->
                            <h3 class="text-center">Products You Maybe Like</h3>
                        </div><!-- box same-height headline Finish -->
                    </div><!-- col-md-3 col-sm-6 Finish -->
